@@ -11,21 +11,24 @@
   <body>
     <div id="container">
       <header>
-        <h1>Todo List</h1>
+        <h1>My Todo-List</h1>
       </header>
       <main>
-        <h2>Tâches à accomplir</h2>
+        <h2>Tasks to complete</h2>
         <ul>
           <!--generated from js file-->
-          <li id="defaultTask"><span>+</span>Ajouter une tâche</li>
+          <li id="defaultTask"><span>+</span>Add a task</li>
         </ul>
         <div id="containerNewItem">
-          <button class="buttonTask" id="askTask">Ajouter une tâche</button>
+          <button class="buttonTask" id="askTask">Add a task</button>
         </div>
         <aside>
-          <input type="text" id="inputNewItem" placeholder="Nom de la tâche" />
-          <p id="error">Le champ doit être renseigné</p>
-          <button class="buttonTask" id="addTask">Valider</button>
+          <input
+            type="text"
+            id="inputNewItem"
+            placeholder="What do you need to do ?" />
+          <p id="error">The field must be filled in</p>
+          <button class="buttonTask" id="addTask">Confirm</button>
         </aside>
       </main>
     </div>

@@ -9,29 +9,13 @@ const title = document.querySelector("h1");
 const inputNewItem = document.querySelector("#inputNewItem");
 const modale = document.querySelector("aside");
 const errorMsg = document.querySelector("#error");
+const addByFieldButton = document.querySelector("#defaultTask");
 
 confirmButton.addEventListener("click", handleAddNewTask);
 addButton.addEventListener("click", handleNewTask);
+addByFieldButton.addEventListener("click", handleNewTask);
 
-let tasks = [
-  {
-    id: 1,
-    task: "Arroser les plantes",
-    isDone: false,
-  },
-  {
-    id: 2,
-    task: "Sortir le chien",
-    isDone: false,
-  },
-  {
-    id: 3,
-    task: "Tondre la pelouse",
-    isDone: false,
-  },
-];
-
-createList();
+let tasks = [];
 
 function createList() {
   for (const iterator of tasks) {
@@ -40,7 +24,7 @@ function createList() {
     const input = document.createElement("input");
     const label = document.createElement("label");
     const span = document.createElement("span");
-    span.textContent = "Supprimer";
+    span.textContent = "Delete";
     span.classList.add("delete");
     label.for = iterator.id;
     label.textContent = iterator.task;
