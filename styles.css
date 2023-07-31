@@ -1,0 +1,191 @@
+body {
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+#container {
+  height: 550px;
+  padding: 20px;
+  width: 715px;
+  border-radius: 20px;
+  border-radius: 50px;
+  background: white;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+header {
+  position: relative;
+  border-bottom: solid 1px #e0e0e0;
+  height: 80px;
+}
+
+header h1 {
+  text-align: center;
+}
+
+.mooveButton {
+  left: 0;
+}
+
+.buttonTask {
+  padding: 12.5px 10px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #2ba8fb;
+  color: #ffffff;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.buttonTask:hover {
+  background-color: #6fc5ff;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.buttonTask:active {
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+
+main {
+  margin-top: 30px;
+  position: relative;
+}
+
+ul {
+  padding: 0;
+  height: 320px;
+  overflow-y: scroll;
+}
+
+li {
+  padding: 10px;
+  list-style: none;
+  border-bottom: solid 1px #ededed;
+  display: flex;
+  justify-content: space-between;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+input[type="checkbox"] {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+}
+
+.delete {
+  font-size: 0.7em;
+  text-align: right;
+  color: red;
+  font-weight: bold;
+  display: none;
+  margin-top: 5px;
+}
+
+.displayDelete {
+  display: inline;
+}
+
+#inputTask {
+  position: absolute;
+  top: 8px;
+  right: 258px;
+  padding: 12.5px 10px;
+  border: solid 1px #2ba8fb;
+  border-radius: 10px;
+  background-color: white;
+  display: none;
+}
+
+#containerNewItem {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+aside {
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 150px;
+  width: 500px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  background: rgba(255, 255, 255);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: none;
+}
+
+#inputNewItem {
+  border: none;
+  border-bottom: solid 1px #e0e0e0;
+  padding-bottom: 10px;
+  font-size: 2em;
+}
+
+#asktask {
+  position: fixed;
+}
+
+#error {
+  font-size: 0.8em;
+  font-style: italic;
+  color: red;
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  border: solid 0 transparent;
+  background-color: #2aa8fb;
+}
+
+#defaultTask {
+  display: flex;
+  justify-content: flex-start;
+  color: lightgrey;
+}
+
+#defaultTask span {
+  position: relative;
+  top: 0;
+  left: 7px;
+  padding-right: 18px;
+  color: lightgrey;
+}

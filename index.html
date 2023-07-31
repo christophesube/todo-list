@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Todo list</title>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>Todo List</h1>
+      </header>
+      <main>
+        <h2>Tâches à accomplir</h2>
+        <ul>
+          <!--generated from js file-->
+          <li id="defaultTask"><span>+</span>Ajouter une tâche</li>
+        </ul>
+        <div id="containerNewItem">
+          <button class="buttonTask" id="askTask">Ajouter une tâche</button>
+        </div>
+        <aside>
+          <input type="text" id="inputNewItem" placeholder="Nom de la tâche" />
+          <p id="error">Le champ doit être renseigné</p>
+          <button class="buttonTask" id="addTask">Valider</button>
+        </aside>
+      </main>
+    </div>
+    <script src="datas.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
