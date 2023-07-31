@@ -1,8 +1,9 @@
 const ul = document.querySelector("ul");
 const li = undefined;
 const main = document.querySelector("main");
-let items = undefined;
-let checkbox = undefined;
+let items;
+let checkbox;
+let label;
 const addButton = document.querySelector("#askTask");
 const confirmButton = document.querySelector("#addTask");
 const title = document.querySelector("h1");
@@ -17,12 +18,13 @@ addByFieldButton.addEventListener("click", handleNewTask);
 
 let tasks = [];
 
+/* Create the list from the content include in the tasks array */
 function createList() {
   for (const iterator of tasks) {
     const li = document.createElement("li");
     const div = document.createElement("div");
     const input = document.createElement("input");
-    const label = document.createElement("label");
+    label = document.createElement("label");
     const span = document.createElement("span");
     span.textContent = "Delete";
     span.classList.add("delete");
@@ -68,11 +70,10 @@ function handleHide(e) {
 
 function handleDelete(e) {
   const taskToRemove = e.currentTarget.parentNode;
-
   const itemToRemoveFromArray = taskToRemove.id;
   const newArray = tasks.filter((ele) => ele.id != itemToRemoveFromArray);
-  taskToRemove.remove();
-  tasks = newArray;
+  taskToRemove.remove(); /* Delete the element from DOM */
+  tasks = newArray; /* And copy elements filtered in the array */
 }
 
 function handleNewTask() {
@@ -80,7 +81,7 @@ function handleNewTask() {
 }
 
 function handleAddNewTask() {
-  /*Suppression des éléments de la liste avant de la recréer */
+  /* Clean all Element before recreate it. Need to do something cleaner*/
   deleteChilds();
 
   let itemToAdd = {};
@@ -88,7 +89,10 @@ function handleAddNewTask() {
   if (inputNewItem.value != "") {
     errorMsg.style.display = "none";
     itemToAdd.task = inputNewItem.value;
-    itemToAdd.id = "5"; /* Dynamiser l'affichage de l'id */
+    itemToAdd.id =
+      /* Generate a random id from string + random number  */
+      inputNewItem.value.substring(0, 3).toLowerCase() +
+      Math.ceil(Math.random() * 100);
     tasks.unshift(itemToAdd);
     modale.style.display = "none";
     inputNewItem.value = "";
@@ -112,8 +116,6 @@ function handleChecked(e) {
 }
 
 /*TODO 
-- supprimer => delete from array => OK
 - coché => rayé la task et passé isDone à true
 - croix de fermeture sur modale
-- ajout des task via modale => OK
 */
