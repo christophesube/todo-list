@@ -56,9 +56,7 @@ function createList() {
   }
   items = document.querySelectorAll(".items");
   checkbox = document.getElementsByClassName("checkbox");
-  checkbox[0].addEventListener("click", () => alert("hey"));
-  console.log(checkbox);
-  addListener();
+  -addListener();
 }
 
 function addListener() {
@@ -66,6 +64,11 @@ function addListener() {
     element.addEventListener("mouseover", handleShow);
     element.addEventListener("mouseout", handleHide);
   });
+
+  for (let i = 0; i < checkbox.length; i++) {
+    checkbox[i].addEventListener("click", handleChecked);
+    checkbox = document.getElementsByClassName("checkbox");
+  }
 }
 
 function handleShow(e) {
@@ -119,8 +122,9 @@ function deleteChilds() {
   });
 }
 
-function handleChecked() {
-  alert("hey");
+function handleChecked(e) {
+  const itemContent = e.currentTarget.nextSibling;
+  itemContent.classList.toggle("contentChecked");
 }
 
 /*TODO 
@@ -128,5 +132,4 @@ function handleChecked() {
 - coché => rayé la task et passé isDone à true
 - croix de fermeture sur modale
 - ajout des task via modale => OK
-
 */
