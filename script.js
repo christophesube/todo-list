@@ -79,6 +79,7 @@ function handleDelete(e) {
 }
 
 function handleNewTask() {
+  addButton.style.display = "none";
   modale.style.display = "flex";
 }
 
@@ -97,6 +98,7 @@ function handleAddNewTask() {
       Math.ceil(Math.random() * 100);
     tasks.unshift(itemToAdd);
     modale.style.display = "none";
+    addButton.style.display = "block";
     inputNewItem.value = "";
     createList();
   } else {
@@ -118,5 +120,6 @@ function handleChecked(e) {
 }
 
 function handleClose() {
+  addButton.style.display = "block";
   modale.style.display = "none";
 }
