@@ -24,12 +24,21 @@
         </div>
         <aside>
           <img src="./assets/close-btn.png" alt="close bouton" />
-          <input
-            type="text"
-            id="inputNewItem"
-            placeholder="What do you need to do ?" />
-          <p id="error">The field must be filled in</p>
-          <button class="buttonTask" id="addTask">Confirm</button>
+          <div id="topAsideBlock">
+            <input
+              type="text"
+              id="inputNewItem"
+              placeholder="Name of the task" />
+            <p id="error">The field must be filled in</p>
+            <select name="category" id="cat-select">
+              <option value="">Select a category</option>
+              <option value="work">Work</option>
+              <option value="Traver">Travel</option>
+            </select>
+          </div>
+          <div id="bottomAsideBlock">
+            <button class="buttonTask" id="addTask">Confirm</button>
+          </div>
         </aside>
       </main>
     </div>
