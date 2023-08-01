@@ -42,13 +42,11 @@ header h1 {
 
 .buttonTask {
   padding: 12.5px 20px;
-  font-size: 1.2em;
-  letter-spacing: 1.5px;
+  font-size: 1em;
   border: 0;
   border-radius: 10px;
   background-color: #2ba8fb;
   color: #ffffff;
-  font-weight: Bold;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
