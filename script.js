@@ -11,10 +11,12 @@ const inputNewItem = document.querySelector("#inputNewItem");
 const modale = document.querySelector("aside");
 const errorMsg = document.querySelector("#error");
 const addByFieldButton = document.querySelector("#defaultTask");
+const closeBtn = document.querySelector("img");
 
 confirmButton.addEventListener("click", handleAddNewTask);
 addButton.addEventListener("click", handleNewTask);
 addByFieldButton.addEventListener("click", handleNewTask);
+closeBtn.addEventListener("click", handleClose);
 
 let tasks = [];
 
@@ -115,7 +117,6 @@ function handleChecked(e) {
   itemContent.classList.toggle("contentChecked");
 }
 
-/*TODO 
-- coché => rayé la task et passé isDone à true
-- croix de fermeture sur modale
-*/
+function handleClose() {
+  modale.style.display = "none";
+}
