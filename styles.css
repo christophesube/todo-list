@@ -175,7 +175,9 @@ select {
 
 #inputNewItem {
   border: none;
-  padding-bottom: 20px;
+  outline: none;
+  padding: 5px;
+  margin-bottom: 20px;
   font-size: 2em;
   font-weight: bold;
   width: 100%;
@@ -190,6 +192,9 @@ select {
   font-style: italic;
   color: red;
   display: none;
+  position: relative;
+  top: -18px;
+  left: 8px;
 }
 
 ::-webkit-scrollbar {
